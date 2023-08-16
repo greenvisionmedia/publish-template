@@ -12,6 +12,6 @@ jobs:
     uses: greenvisionmedia/gvm-pipeline/.github/workflows/main.yml@c9ba3b39900a28996e0d48b459fc1ada8c8e1c72
     with:
       staging: true
-      sitecode: ${{env.SITE}}
-      domain: ${{env.SITE}}
+      sitecode: $SITE
+      domain: $SITE
     secrets: inherit
