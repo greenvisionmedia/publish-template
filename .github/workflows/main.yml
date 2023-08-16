@@ -1,0 +1,17 @@
+#Action to deploy directly to a domain and call re-usable deploy
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+env:
+  SITE: $GITHUB_HEAD_REF
+
+jobs:
+  deploy:
+    uses: greenvisionmedia/gvm-pipeline/.github/workflows/main.yml@c9ba3b39900a28996e0d48b459fc1ada8c8e1c72
+    with:
+      staging: true
+      sitecode: ${{env.SITE}}
+      domain: ${{env.SITE}}
+    secrets: inherit
