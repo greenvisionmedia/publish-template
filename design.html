@@ -1,11 +1,11 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
 <!--  Last Published: Thu Oct 27 2022 16:23:53 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="6304ee6aa155bec6ef8384fa" data-wf-site="6304ee69a155be6a008384f3" lang="en">
+<html data-wf-page="630660a2eb1ce8850f52d219" data-wf-site="6304ee69a155be6a008384f3" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Not Found</title>
-  <meta content="Not Found" property="og:title">
-  <meta content="Not Found" property="twitter:title">
+  <title>Design</title>
+  <meta content="Design" property="og:title">
+  <meta content="Design" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -27,18 +27,161 @@
 </style>
 </head>
 <body>
-  <div bind="60d3fe8d16a07670a7e520bfaN" class="utility_component">
-    <div bind="60d3fe8d16a07670a7e520bf00000000000b" data-w-id="60d3fe8d16a07670a7e520bf00000000000b" style="opacity:0;-webkit-transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="utility_form-block w-form">
-      <div bind="ea7bb98f-3570-eba8-4bc4-00046379ffa1" class="w-embed"><svg viewbox="0 0 128 128" height="128px" width="auto" style="fill: currentColor; padding: 1rem">
-          <path class="cls-1" d="M79.6,64c14.7-16,27.2-33.7,35.9-51.5-17.8,8.7-35.5,21.2-51.5,35.9C48,33.7,30.3,21.3,12.5,12.5c8.7,17.8,21.2,35.4,35.9,51.5-14.7,16-27.2,33.7-35.9,51.5,17.8-8.7,35.4-21.2,51.5-35.9,16,14.7,33.7,27.2,51.5,35.9-8.7-17.8-21.2-35.5-35.9-51.5Z"></path>
-        </svg></div>
-      <div bind="c5feeda5-812b-9c52-6ded-01570290152e" class="margin-bottom margin-small">
-        <h1 bind="60d3fe8d16a07670a7e520bf00000000000d">Page Not Found</h1>
-      </div>
-      <div bind="a65a1401-941b-812d-6837-8fc27c9f4db5" class="text-shadow">The page you are looking for doesn&#x27;t exist or has been moved</div>
-      <div bind="53535dac-fbfe-99e5-3d57-f0ab8453fa60" class="margin-top margin-medium">
-        <a bind="f7e51fb9-2444-74ed-f2a4-3e5338dc3f4d" href="index.html" class="button w-button">Go Home</a>
-      </div>
+  <div bind="6263da8e-c66c-46b1-8bd8-ef13f514b4b6" class="page-wrapper">
+    <div bind="5ffad809-50c0-31dd-2ebc-e3eb71f28b9b" data-w-id="5ffad809-50c0-31dd-2ebc-e3eb71f28b9b" class="global-styles w-embed">
+      <style>
+/* Custom colors*/
+body {
+    --white: #f4f8e6;
+    --earth: #352227;
+    --tree: #4d6a56;
+    --leaf: #79986b;
+    --sky: #b2bc7e;
+}
+/* Snippet gets rid of top margin on first element in any rich text*/
+.w-richtext>:first-child {
+	margin-top: 0;
+}
+/* Snippet gets rid of bottom margin on last element in any rich text*/
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0;
+}
+/* Snippet prevents all click and hover interaction with an element*/
+.clickable-off {
+	pointer-events: none;
+}
+/* Snippet enables all click and hover interaction with an element */
+.clickable-on{
+  pointer-events: auto;
+}
+/* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+.div-square::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+/*Hide focus outline for main content element*/
+main:focus-visible {
+	outline: -webkit-focus-ring-color auto 0px;
+}
+/* Make sure containers never lose their center alignment*/
+.container-medium, .container-small, .container-large {
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+/*Reset buttons, and links styles*/
+a {
+	color: inherit;
+	text-decoration: inherit;
+	font-size: inherit;
+}
+/* Apply "..." after 3 lines of text*/
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text*/
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+/* Header title/icon animations */
+@keyframes slidein {
+  from {
+    transform: translate(-3rem,3rem);
+    opacity: 0%;
+  }
+  to {
+   	transform: translate(0rem,0rem);
+    opacity: 100%;
+  }
+}
+.is-color-white {
+	animation: slidein 1s;
+}
+.is-color-sky {
+	animation: slidein 1.5s;
+}
+.is-color-leaf {
+	animation: slidein 2s;
+}
+.is-color-tree {
+	animation: slidein 2.5s;
+}
+/* Used to stack html elements*/
+.div-stack {
+	display: grid;
+}
+	/* Sets all children to occupy the same css grid position*/
+.div-stack * {
+	position: relative;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  fill: currentColor;
+}
+/* Icons */
+.icon-color-inherit svg {
+fill: currentColor;
+}
+/* Highlight */
+::selection {
+background-color: var(--sky);
+color: var(--tree);
+}
+/* Image loader */
+.image-loader, .credit-loader {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+}
+.image-loader::before, .credit-loader::before {
+  color: var(--leaf);
+  content: "i";
+  display: inline-block;
+  outline: none;
+  padding: .5em 1.1em .5em 1.1em;;
+  background: white;
+  font-family: Bookmania;
+  font-weight: bold;
+}
+.image-loader:hover::before,
+.image-loader:focus::before {
+  content: "Click to load full color image."
+}
+.image-loader:checked {
+  display: none;
+}
+.image-loader ~ .cs-image {
+  display: none;
+  height: auto;
+}
+.image-loader:checked ~ .cs-image {
+  display: initial;
+}
+.image-loader:checked ~ .cs-image-green {
+  display: none;
+}
+.image-credit {
+	opacity: 0;
+}
+.credit-loader:hover::before,
+.credit-loader:focus::before {
+  content: "Click to show image attribution.";
+}
+.credit-loader:checked ~ .image-credit {
+  opacity: 100;
+}
+</style>
     </div>
     <nav bind="9237feec-87fb-d183-448d-36d3a59592d0" class="nav_component">
       <div bind="9237feec-87fb-d183-448d-36d3a59592d1" class="nav_title">
@@ -58,7 +201,7 @@
         <div bind="9237feec-87fb-d183-448d-36d3a59592db" class="nav_menu-dropdown is-bg-white">
           <div bind="9237feec-87fb-d183-448d-36d3a59592dc" class="nav_menu-line"></div>
           <a bind="5156e048-9cde-6e4a-9814-ed203795914b" href="index.html" class="nav_menu-dropdown-text w-inline-block">Home</a>
-          <a bind="54850cc5-1490-b746-8e41-0091606bb2db" href="design.html" class="nav_menu-dropdown-text w-inline-block">Design</a>
+          <a bind="54850cc5-1490-b746-8e41-0091606bb2db" href="design.html" aria-current="page" class="nav_menu-dropdown-text w-inline-block w--current">Design</a>
           <a bind="5d0460bf-ab6f-4cba-cb3e-af182426c665" href="hosting.html" class="nav_menu-dropdown-text w-inline-block">Hosting</a>
         </div>
         <div bind="9237feec-87fb-d183-448d-36d3a59592e3" class="nav_menu-text">Menu</div>
@@ -73,6 +216,54 @@
         </a>
       </div>
     </nav>
+    <main bind="797be6a5-8691-4c9e-8e51-2b78ae3a6711" class="main-wrapper">
+      <header bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8254" class="header wf-section">
+        <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8255" class="header_component">
+          <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8256" class="header_image-wrapper"><img src="images/Dithered-Misty-Forest-2.png" loading="lazy" data-sizes="[{&quot;max&quot;:10000,&quot;size&quot;:&quot;100vw&quot;}]" bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8257" alt="" class="header_image"></div>
+          <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8258" class="header_content-wrapper">
+            <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8259" class="header_graphic-wrapper div-stack">
+              <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b825a" class="is-color-tree w-embed"><svg viewbox="0 0 256 128" height="100%" width="auto">
+                  <path d="M92.7,128C95.4,83.8,117.1,32.5,147.3,0c-2.6,44.3-24.5,95.5-54.6,128h0Z"></path>
+                  <path d="M83.8,16.6c-10,20.3-24.9,37.8-40.6,53.9,0,0,0-13.3,0-13.3,15.9,16.1,30.8,33.7,40.9,54.1-23.3-11.4-42.8-29.2-60.8-47.5,18-18.2,37.4-35.8,60.5-47.2Z"></path>
+                  <path d="M156.2,111.4c10-20.3,24.9-37.8,40.6-53.9,0,0,0,13.3,0,13.3-15.9-16.1-30.8-33.7-40.9-54.1,23.3,11.4,42.8,29.2,60.8,47.5-18,18.2-37.4,35.8-60.5,47.2h0Z"></path>
+                </svg></div>
+              <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b825b" class="is-color-leaf w-embed"><svg viewbox="0 0 256 128" height="100%" width="auto">
+                  <path d="M92.7,128C95.4,83.8,117.1,32.5,147.3,0c-2.6,44.3-24.5,95.5-54.6,128h0Z"></path>
+                  <path d="M83.8,16.6c-10,20.3-24.9,37.8-40.6,53.9,0,0,0-13.3,0-13.3,15.9,16.1,30.8,33.7,40.9,54.1-23.3-11.4-42.8-29.2-60.8-47.5,18-18.2,37.4-35.8,60.5-47.2Z"></path>
+                  <path d="M156.2,111.4c10-20.3,24.9-37.8,40.6-53.9,0,0,0,13.3,0,13.3-15.9-16.1-30.8-33.7-40.9-54.1,23.3,11.4,42.8,29.2,60.8,47.5-18,18.2-37.4,35.8-60.5,47.2h0Z"></path>
+                </svg></div>
+              <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b825c" class="is-color-sky w-embed"><svg viewbox="0 0 256 128" height="100%" width="auto">
+                  <path d="M92.7,128C95.4,83.8,117.1,32.5,147.3,0c-2.6,44.3-24.5,95.5-54.6,128h0Z"></path>
+                  <path d="M83.8,16.6c-10,20.3-24.9,37.8-40.6,53.9,0,0,0-13.3,0-13.3,15.9,16.1,30.8,33.7,40.9,54.1-23.3-11.4-42.8-29.2-60.8-47.5,18-18.2,37.4-35.8,60.5-47.2Z"></path>
+                  <path d="M156.2,111.4c10-20.3,24.9-37.8,40.6-53.9,0,0,0,13.3,0,13.3-15.9-16.1-30.8-33.7-40.9-54.1,23.3,11.4,42.8,29.2,60.8,47.5-18,18.2-37.4,35.8-60.5,47.2h0Z"></path>
+                </svg></div>
+              <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b825d" class="is-color-white w-embed"><svg viewbox="0 0 256 128" height="100%" width="auto">
+                  <path d="M92.7,128C95.4,83.8,117.1,32.5,147.3,0c-2.6,44.3-24.5,95.5-54.6,128h0Z"></path>
+                  <path d="M83.8,16.6c-10,20.3-24.9,37.8-40.6,53.9,0,0,0-13.3,0-13.3,15.9,16.1,30.8,33.7,40.9,54.1-23.3-11.4-42.8-29.2-60.8-47.5,18-18.2,37.4-35.8,60.5-47.2Z"></path>
+                  <path d="M156.2,111.4c10-20.3,24.9-37.8,40.6-53.9,0,0,0,13.3,0,13.3-15.9-16.1-30.8-33.7-40.9-54.1,23.3,11.4,42.8,29.2,60.8,47.5-18,18.2-37.4,35.8-60.5,47.2h0Z"></path>
+                </svg></div>
+            </div>
+            <div bind="3831adb9-0864-8925-995d-a1d3d3eeec70" class="header_title-margin is-design">
+              <div bind="53f6bf3d-9db5-a15e-49e7-276d4c0b825e" class="header_title-wrapper div-stack">
+                <h1 bind="53f6bf3d-9db5-a15e-49e7-276d4c0b825f" class="is-color-tree">Elegant, minimal, eco-friendly designs.</h1>
+                <h1 bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8261" class="is-color-leaf">Elegant, minimal, eco-friendly designs.</h1>
+                <h1 bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8263" class="is-color-sky">Elegant, minimal, eco-friendly designs.</h1>
+                <h1 bind="53f6bf3d-9db5-a15e-49e7-276d4c0b8265" class="is-color-white">Elegant, minimal, eco-friendly designs.</h1>
+              </div>
+            </div>
+            <div bind="88ad4255-74fa-e147-535b-0fbbdbe55fc3" data-w-id="88ad4255-74fa-e147-535b-0fbbdbe55fc3" style="opacity:0;-webkit-transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-2rem, 2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="header_call-to-action">
+              <div bind="083db15b-b062-89b1-8217-3d1b277415eb" class="margin-top margin-large max-width-medium">
+                <p bind="083db15b-b062-89b1-8217-3d1b277415ec" class="text-size-large text-align-center text-shadow">Work with designers who want the best for the <strong bind="95ab2121-bdee-ea4f-6b68-c466ba0e3e86">planet </strong>and your <strong bind="f1d1cf76-b247-114d-93b8-b355fe2d64f5">website</strong>.</p>
+              </div>
+              <div bind="7bdb3b71-3d6d-68a9-bb6e-3c604220cd68" class="margin-top margin-large">
+                <a bind="2988d29f-378f-a297-bfad-0f8ae3590bee" href="#" class="button is-dark w-button">Get in touch.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+    <div id="wcb" bind="869ea11f-778b-6af0-d601-0b36db785656" class="gvm-d"></div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6304ee69a155be6a008384f3" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
